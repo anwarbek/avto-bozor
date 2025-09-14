@@ -11,17 +11,42 @@ html {
   box-sizing: inherit;
 }
 
+.button {
+  padding: 15px 35px;
+  font-size: 16px;
+  color: #fff;
+  background: #266dfb;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.button:not(:last-child) {
+  margin-right: 18px;
+}
+
+.button:hover {
+  color: #266dfb;
+  background-color: #fff;
+}
+
+
 body {
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 0;
   margin: 0;
-  font-family: "Arial", sans-serif;
+  font-family: "Open San", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #fff;
   color: #222;
+  background-image: url(../img/bg-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
 }
 
 img {
@@ -33,15 +58,291 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: 50px;
-  margin-right: 50px;
+  max-width: 1352px;
+  padding: 0 50px;
+  margin: 0 auto;
 }
 
 
 /* MAIN-CONTENT */
 .main-content {
   flex-grow: 1;
+}
+
+
+/* HEADER */
+.header {
+  background-color: #ffffff;
+}
+
+.header-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.autoshop-logo {
+  width: 200px;
+}
+
+.sitenav__list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.sitenav__link {
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  color: #266dfb;
+}
+
+.sitenav__link:hover {
+  color: #fb2626;
+}
+
+.search {
+  width: 250px;
+  padding: 8px;
+  border: none;
+  color: #266dfb;
+  border: 2px solid #266dfb;
+  border-radius: 8px;
+}
+
+/* HERO */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 130px 0 20px;
+  padding: 30px;
+  background-color: #2273f459;
+  border-radius: 20px;
+}
+
+.hero-title {
+  margin: 0 0 30px;
+  padding: 0;
+  font-size: 60px;
+  color: #fff;
+}
+
+.hero-text {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+
+/* MODELLAR */
+
+.header-models {
+  padding: 82px 0 0;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.models-body {
+  background-image: url("");
+}
+
+.models-sitenav__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.models-sitenav__item {
+  position: relative;
+  margin-right: 16px;
+}
+
+
+.models-sitenav__link {
+  text-decoration: none;
+  color: #000;
+  margin-right: 9px;
+}
+
+.models-sitenav__link:not(:last-child) {
+  margin-right: 30px;
+}
+
+.models-sitenav__item:not(:last-child)::after {
+  position: absolute;
+  content: ">";
+  color: #000;
+}
+
+
+
+/* MODELS-AUTO*/
+.models-header {
+  margin: 24px 0 48px;
+  padding: 0;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 46px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.models-card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.models-card {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 289px;
+  height: 268px;
+}
+
+.models-card:not(:last-child) {
+  margin-right: 24px;
+}
+
+.model-link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000;
+}
+
+.models-img {
+  overflow: hidden;
+}
+
+.model-title {
+  text-align: center;
+  margin: 16px 0 0;
+  padding: 0;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+/* MODEL-AUTO */
+.model-price {
+  margin: 8px 0 0;
+  padding: 0;
+  text-align: center;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+
+.model-prise-span {
+  font-family: Noto Sans;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+
+/* AUTO */
+.left {
+  width: 30%;
+  background: #f1f1f1;
+  padding: 20px;
+  margin-right: 32px;
+  border-radius: 8px;
+}
+
+.right {
+  width: 65%;
+  text-align: center;
+}
+
+.right img {
+  width: 80%;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-top: 15px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.auto-info-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.auto-model-title {
+  margin: 0 0 12px;
+  text-align: left;
+  padding: 0;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+
+#carImage {
+  min-width: 824px;
+  height: 444px;
+}
+
+.bottom-text {
+  max-width: 744px;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0%;
+}
+
+.peculiarities-title {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0%;
+}
+
+.peculiarities {
+  margin: 0 0 4px;
+  padding: 0;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0%;
 }

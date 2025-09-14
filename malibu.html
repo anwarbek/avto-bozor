@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modellar</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body class="models-body">
+  <!-- SITENAV -->
+  <header class="header-models">
+    <div class="container">
+      <nav class="models-sitenav">
+        <ul class="models-sitenav__list">
+          <li class="models-sitenav__item"><a class="models-sitenav__link" href="index.html">Bosh sahifa</a></li>
+          <li class="models-sitenav__item"><a class="models-sitenav__link" href="modellar.html">Modellari</a></li>
+          <li class="models-sitenav__item"><a class="models-sitenav__link" href="modellar.html">Chevrolet turlari</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="container">
+      <h1 class="models-header">Modellari</h1>
+      <div class="auto-info-container">
+        <!-- Chap blok -->
+        <div class="left">
+          <h2 class="auto-model-title">CHEVROLET MALIBU</h2>
+          <div class="price">329 900 000 so’m dan</div>
+          <img src="img/mailbu.png" alt="Chevrolet Malibu">
+          <p class="peculiarities"><b class="peculiarities-title">Marka:</b> CHEVROLET</p>
+          <p class="peculiarities"><b class="peculiarities-title">Tanirvkasi:</b> Yo’q</p>
+          <p class="peculiarities"><b class="peculiarities-title">Motor:</b> 1.6</p>
+          <p class="peculiarities"><b class="peculiarities-title">Year:</b> 2016</p>
+          <p class="peculiarities"><b class="peculiarities-title">Color:</b> Oq</p>
+          <p class="peculiarities"><b class="peculiarities-title">Distance:</b> 3000 km</p>
+          <p class="peculiarities"><b class="peculiarities-title">Gearbook:</b> Avtomat karobka</p>
+          <p class="peculiarities"><b class="peculiarities-title">Description:</b> Mishina ideal holatda krasska top
+            toza 100tali. Ayol kishiniki
+            judayam
+            akuranto
+            haydalgan.
+          </p>
+          <p><b>Umumiy xarajat:</b> 329 900 000 so’m dan</p>
+        </div>
+        <!-- O'ng blok -->
+        <div class="right">
+          <h2 class="auto-model-title">CHEVROLET MALIBU</h2>
+          <img id="carImage" src="img/malibu-exterer.png" alt="Chevrolet Malibu Front">
+          <div class="bottom-text">
+            Tasvir tanlangan konfiguratsiyaga mos kelmasligi mumkin. Mashinaning rangi ushbu saytda taqdim etilgandan
+            farq
+            qilishi mumkin.
+          </div>
+          <div class="options">
+            <label><input type="radio" name="view" value="exterior" checked> Tashqi</label>
+            <label><input type="radio" name="view" value="interior"> Ichki makon</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const carImage = document.getElementById("carImage");
+    const radios = document.querySelectorAll('input[name="view"]');
+
+    radios.forEach(radio => {
+      radio.addEventListener("change", () => {
+        if (radio.value === "exterior") {
+          carImage.src = "img/malibu-exterer.png"; // tashqi rasm
+        } else if (radio.value === "interior") {
+          carImage.src = "img/malibu-interer.jpg"; // ichki rasm (siz qo'shishingiz kerak)
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
